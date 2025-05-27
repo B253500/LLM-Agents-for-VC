@@ -1,29 +1,29 @@
-# Examples for crewAI
-## Introduction
-crewAI is designed to facilitate the collaboration of role-playing AI agents.
-This is a collection of examples of different ways to use the crewAI framework to automate the processes.
-By [@joaomdmoura](https://x.com/joaomdmoura).
+## agents.py
+This file contains the definition of custom agents.
+To create a Agent, you need to define the following:
+1. Role: The role of the agent.
+2. Backstory: The backstory of the agent.
+3. Goal: The goal of the agent.
+4. Tools: The tools that the agent has access to (optional).
+5. Allow Delegation: Whether the agent can delegate tasks to other agents(optional).
 
-## Examples
-- [Marketing Strategy](https://github.com/joaomdmoura/crewAI-examples/tree/main/marketing_strategy)
-- [Surprise Trip](https://github.com/joaomdmoura/crewAI-examples/tree/main/surprise_trip)
-- [Match to Proposal](https://github.com/joaomdmoura/crewAI-examples/tree/main/match_profile_to_positions)
-- [Find Job Candidades Demo](https://github.com/joaomdmoura/crewAI-examples/tree/main/recruitment)
-- [Create Job Posting](https://github.com/joaomdmoura/crewAI-examples/tree/main/job-posting)
-- [Game Generator](https://github.com/joaomdmoura/crewAI-examples/tree/main/game-builder-crew)
+    [More Details about Agent](https://docs.crewai.com/concepts/agents).
 
-## Old Examples, need to be updated
+## task.py
+This file contains the definition of custom tasks.
+To Create a task, you need to define the following :
+1. description: A string that describes the task.
+2. agent: An agent object that will be assigned to the task.
+3. expected_output: The expected output of the task.
 
-### Basic Examples
+    [More Details about Task](https://docs.crewai.com/concepts/tasks).
 
-- [Trip Planner](https://github.com/joaomdmoura/crewAI-examples/tree/main/trip_planner)
-- [Create Instagram Post](https://github.com/joaomdmoura/crewAI-examples/tree/main/instagram_post)
-- [Markdown Validator](https://github.com/joaomdmoura/crewAI-examples/tree/main/markdown_validator)
-- [Using Azure OpenAI API](https://github.com/joaomdmoura/crewAI-examples/tree/main/azure_model)
+## crew (main.py)
+This is the main file that you will use to run your custom crew.
+To create a Crew , you need to define Agent ,Task and following Parameters:
+1. Agent: List of agents that you want to include in the crew.
+2. Task: List of tasks that you want to include in the crew.
+3. verbose: If True, print the output of each task.(default is False).
+4. debug: If True, print the debug logs.(default is False).
 
-Starting your own example
-  - [Starter Template](https://github.com/joaomdmoura/crewAI-examples/tree/main//starter_template)
-### Advanced Examples
-- [Stock Analysis](https://github.com/joaomdmoura/crewAI-examples/tree/main/stock_analysis)
-- [Landing Page Generator](https://github.com/joaomdmoura/crewAI-examples/tree/main/landing_page_generator)
-- [CrewAI + LangGraph](https://github.com/joaomdmoura/crewAI-examples/tree/main/CrewAI-LangGraph)
+    [More Details about Crew](https://docs.crewai.com/concepts/crew).
